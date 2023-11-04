@@ -1,0 +1,1 @@
+Reference for fractal animation: https://slicker.me/fractals/animate.htm
