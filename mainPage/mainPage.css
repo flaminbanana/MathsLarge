@@ -2,14 +2,18 @@
     text-align: center;
 }
 
-.biiig {
-    font-size:xx-large;
-}
 
 .container {
     border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow:  25px 25px 50px #bebebe,
-                 -15px -15px 50px #ffffff;
+    background: rgb(169, 154, 154);
+    box-shadow:  25px 25px 50px #aea5a5,
+                 -15px -15px 50px rgb(85, 80, 80);
     padding: 0 25px;
 }
+
+.containerText {
+    text-align:center;
+    margin:auto;
+}
+
+
