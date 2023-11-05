@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Store</title>
+    <title>Infinistore</title>
+    <link rel="stylesheet" type="text/css" href="../styleGlobal.css">
     <link rel="stylesheet" type="text/css" href="TESTSHOP.css">
 </head>
 <body>
     <header>
-        <h1>My Online Store</h1>
+        <h1>Infinistore</h1>
         <div class="cart">
-            <p>Cart: <span id="cart-count">0</span></p>
+            <p>Cart: <span id="cart-count">0</span> items</p>
         </div>
-        <a href="TESTCART.html">View Cart</a> <!-- Add a "View Cart" link -->
+    
     </header>
+    <div class="view-cart-container">
+        <a href="TESTCART.html"><button >View Cart</button></a>
+    </div>
     <div class="products" id="products-list">
-        <!-- Product items will be added here dynamically using JavaScript -->
     </div>
     <div style="display: flex; justify-content: center;">
         <button id="clear-cart" class="button">Clear cart</button>
     </div>
     <script src="TESTSHOP.js"></script>
 </body>
+<footer>
+    <h1 class="footText">
+        Return to our main page here! <a href="../mainPage/mainPage.html"><button> Return </button></a>
+    </h1>
+    <br>
+    <br>
+    <br>
+</footer>
 </html>

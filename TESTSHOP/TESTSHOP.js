@@ -61,7 +61,7 @@ function renderProducts() {
         productDiv.appendChild(name);
 
         const price = document.createElement('p');
-        price.textContent = `$${product.price.toFixed(2)}`;
+        price.textContent = `£${product.price.toFixed(2)}`;
         productDiv.appendChild(price);
 
         const button = document.createElement('button');
