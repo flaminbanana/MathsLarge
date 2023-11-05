@@ -1,4 +1,5 @@
-This is a website dedicated to exploring infinity... as well as selling so merch lets gooo
+This is a website dedicated to exploring infinity... as well as selling so merch lets gooo.
+Created for Durhack 2023
 
 
 References:
