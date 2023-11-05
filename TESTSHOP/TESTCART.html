@@ -13,8 +13,14 @@
         <!-- Cart items will be displayed here dynamically using JavaScript -->
     </div>
     <p id="total-cost">Total Cost: $0.00</p> <!-- Create an element for the total cost -->
-    <a href="TESTSHOP.html">Back to Store</a>
+    <a href="TESTSHOP.html" style="  display: flex; justify-content: center;"><button>Back to Store</button></a>
     <script src="TESTCART.js"></script>
+    <script src="TESTSHOP.js"></script>
+    <script src="purchaseAlert.js"></script>
+    <br><br><br>
+    <div style="display: flex; justify-content: center;">
+        <button id="clear-cart" class="button" onclick="history.back();purchaseAlert();">Purchase</button>
+    </div>
 </body>
 </html>
 

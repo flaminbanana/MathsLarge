@@ -42,3 +42,13 @@ function renderCart() {
 }
 
 renderCart();
+
+window.addEventListener("load", () => {
+    document.getElementById("clear-cart").addEventListener("click", () => {
+        totalItems = 0;
+        totalCost = 0;
+        localStorage.setItem("totalItems", 0);
+        localStorage.setItem("totalCost", 0);
+        updateCartCount();
+    });
+})
