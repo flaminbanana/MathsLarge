@@ -1,16 +1,21 @@
 const cartItems = document.getElementById('cart-items');
-const totalCostElement = document.getElementById('totalCost');
+const totalCostElement = document.getElementById('total-cost');
 
+const cart = [];
+totalItems = localStorage.getItem("totalItems") || 0;
 function renderCart() {
     cartItems.innerHTML = '';
 
-    if (cart.length === 0) {
+    if (totalItems == 0) {
         const emptyCartMessage = document.createElement('p');
         emptyCartMessage.textContent = 'Your cart is empty.';
         cartItems.appendChild(emptyCartMessage);
-        totalCostElement.textContent = 'Total Cost: $0.00';
+        totalCostElement.textContent = `Total Cost: $0.00`;
     } else {
-        let totalCost = 0;
+        let totalCost = parseFloat(localStorage.getItem("totalCost"));
+        if (totalCost === null) {
+            totalCost = 0;
+        }
 
         cart.forEach((product) => {
             const cartItem = document.createElement('div');
@@ -32,11 +37,8 @@ function renderCart() {
 
             totalCost += product.price;
         });
-
-        totalCostElement.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+     totalCostElement.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
     }
 }
 
 renderCart();
-
-//comment
