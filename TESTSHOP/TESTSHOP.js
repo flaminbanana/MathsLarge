@@ -21,7 +21,15 @@ const products = [
 
 const cart = [];
 const itemCounts = {};
-let totalCost = 0;
+let totalCost = parseInt(localStorage.getItem("totalCost"));
+if (totalCost === null) {
+    totalCost = 0;
+}
+
+let totalItems = parseInt(localStorage.getItem("totalItems"));
+if (totalItems === null) {
+    totalItems = 0;
+}
 
 function addToCart(product) {
     if (!itemCounts[product.id]) {
@@ -30,6 +38,9 @@ function addToCart(product) {
     cart.push(product);
     itemCounts[product.id]++;
     totalCost += product.price;
+    totalItems++;
+    localStorage.setItem("totalItems", totalItems)
+    localStorage.setItem("totalCost", totalCost)
     updateCartCount();
 }
 
@@ -72,7 +83,18 @@ function updateCartPage() {
 
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
-    cartCount.textContent = cart.length;
+    cartCount.textContent = totalItems;
 }
 
 renderProducts();
+updateCartCount();
+
+window.addEventListener("load", () => {
+    document.getElementById("clear-cart").addEventListener("click", () => {
+        totalItems = 0;
+        totalCost = 0;
+        localStorage.setItem("totalItems", 0);
+        localStorage.setItem("totalCost", 0);
+        updateCartCount();
+    });
+})
